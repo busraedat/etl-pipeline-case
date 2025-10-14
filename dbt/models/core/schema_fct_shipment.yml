@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: fct_shipment
+    columns:
+      - name: shipment_id
+        tests: [not_null, unique]
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fct_order')
+              field: order_id
