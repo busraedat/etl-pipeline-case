@@ -1,12 +1,15 @@
+
 elt_case_bq:
   target: dev
   outputs:
     dev:
       type: bigquery
-      method: service-account
-      keyfile: /ABSOLUTE/PATH/TO/service_account.json   # Bunu repoya koyma!
-      project: YOUR_GCP_PROJECT_ID
-      dataset: analytics
-      location: EU
+    
+      method: oauth
+      project: ordinal-skyline-441507-p6   
+      dataset: analytics                    
+      location: US                    
       threads: 4
       timeout_seconds: 300
+
+
