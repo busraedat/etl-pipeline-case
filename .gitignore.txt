@@ -1,0 +1,8 @@
+__pycache__/
+.env
+.envrc
+target/
+dbt_packages/
+.idea/
+.DS_Store
+.vscode/
