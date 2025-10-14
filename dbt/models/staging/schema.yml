@@ -20,3 +20,13 @@ models:
           - relationships:
               to: ref('stg_users')
               field: customer_id
+
+  - name: stg_subscriptions
+    columns:
+      - name: subscription_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
