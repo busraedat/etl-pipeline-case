@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: users
+      - name: addresses
+      - name: subscriptions
+      - name: orders
+      - name: shipments
+      - name: MarketingSpend
+      - name: cities
+      - name: states
+      - name: countries
+      - name: neighborhoods
