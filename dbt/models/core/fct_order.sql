@@ -1,4 +1,3 @@
-{{ config(materialized='table', schema='core') }}
 
 select
   order_id,

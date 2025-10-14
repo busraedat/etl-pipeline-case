@@ -1,22 +1,8 @@
-name: "elt_case"
-version: "1.0.0"
-config-version: 2
-
-profile: "elt_case_bq"
-
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-target-path: "target"
-
 models:
-  elt_case:
+  etl-pipeline-case:    
     staging:
       +materialized: view
+      +dataset: stg    
     core:
       +materialized: table
-    marts:
-      +materialized: table
+      +dataset: core  
