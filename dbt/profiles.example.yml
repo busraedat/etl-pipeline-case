@@ -1,0 +1,12 @@
+elt_case_bq:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /ABSOLUTE/PATH/TO/service_account.json   # Bunu repoya koyma!
+      project: YOUR_GCP_PROJECT_ID
+      dataset: analytics
+      location: EU
+      threads: 4
+      timeout_seconds: 300
