@@ -1,8 +1,11 @@
 models:
-  etl-pipeline-case:    
+  etl-pipeline-case:        
     staging:
       +materialized: view
-      +dataset: stg    
+      +dataset: stg
     core:
       +materialized: table
-      +dataset: core  
+      +dataset: core
+    marts:
+      +materialized: table
+      +dataset: marts
