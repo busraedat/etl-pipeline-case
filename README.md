@@ -61,9 +61,9 @@ Bu proje, farklı veri kaynaklarından elde edilen ham verilerin BigQuery'e yük
   Gerçek senaryoda tıklama verisi reklam API’lerinden (ör. Meta Ads, Google Ads) alınır ve `fct_marketing_spend(date, channel, spend_try, clicks)` tablosuna eklenir.
 
 - **İptal (churn) tarihi**  
-  Kaynaklarda iptal tarihi (`cancel_date`) alanı bulunmadığından,  
+  Kaynaklarda iptal tarihi (`end_date`) alanı bulunmadığından,  
   **`nextOrderDate` iptal tarihi gibi kabul edilmiştir.**  
-  Bu yaklaşım sadece tahmini churn oranı hesaplamak içindir; gerçek sistemde `cancelled_at` alanı kullanılmalıdır.
+  Bu yaklaşım sadece tahmini churn oranı hesaplamak içindir; gerçek sistemde `end_date` alanı kullanılmalıdır.
 
 - **Partitioning (ingestion-time)**   
   Sorgularda `_PARTITIONDATE` veya `_PARTITIONTIME` alanları üzerinden filtreleme yapılır:  
