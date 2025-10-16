@@ -39,7 +39,7 @@ Bu proje, farklı veri kaynaklarından elde edilen ham verilerin BigQuery'e yük
 - **Uniqueness:** `orders.order_id`, `customers.customer_id`, `subscriptions.subscription_id`  
 - **Null Kontrolü:** Birincil/harici anahtarlar NULL olamaz  
 - **İlişki Bütünlüğü:** `orders.customer_id → customers.customer_id`  
-- **Tazelik:** Kaynakların güncelliği `ingest_date` veya `_PARTITIONTIME` ile izlenir  
+- **Tazelik:** Kaynakların güncelliği `_PARTITIONTIME` ile izlenir  
 - **İş Kuralları:** `discount_total ≥ 0`, `net_revenue ≥ 0`  
 
 ---
