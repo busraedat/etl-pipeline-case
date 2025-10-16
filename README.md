@@ -65,8 +65,7 @@ Bu proje, farklı veri kaynaklarından elde edilen ham verilerin BigQuery'e yük
   **`nextOrderDate` iptal tarihi gibi kabul edilmiştir.**  
   Bu yaklaşım sadece tahmini churn oranı hesaplamak içindir; gerçek sistemde `cancelled_at` alanı kullanılmalıdır.
 
-- **Partitioning (ingestion-time)**  
-  Raw tablolar ingestion-time partition ile kuruludur; ayrı bir `ingest_date` kolonu yoktur.  
+- **Partitioning (ingestion-time)**   
   Sorgularda `_PARTITIONDATE` veya `_PARTITIONTIME` alanları üzerinden filtreleme yapılır:  
   ```sql
   WHERE _PARTITIONDATE BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND CURRENT_DATE()
