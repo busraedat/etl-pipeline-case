@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_users
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_users')
+              field: customer_id
+
+  - name: stg_subscriptions
+    columns:
+      - name: subscription_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null

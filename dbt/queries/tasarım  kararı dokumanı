@@ -1,0 +1,7 @@
+BigQuery tercih edilmiştir (basit yönetim, hızlı sorgular).
+
+dbt kullanılarak dönüşümler versiyonlanabilir hale getirilmiştir.
+
+Prefect kullanımıyla izlenebilir ve yeniden çalıştırılabilir bir pipeline kurulmuştur.
+
+Incremental + snapshot stratejisiyle hem maliyet hem veri bütünlüğü dengelenmiştir.
