@@ -1,4 +1,4 @@
--- discount_total Ã¢â€°Â¥ 0
+-- discount_total â‰¥ 0
 select *
 from {{ ref('fct_order') }}
 where discount_total < 0
